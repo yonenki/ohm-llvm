@@ -303,7 +303,7 @@ static bool encodeMachineLeaves(SmallVectorImpl<const Value *> &Affected,
     return OM.lookup(L).first < OM.lookup(R).first;
   });
 
-  enum Word {
+  enum Word : uint64_t {
     KnownUser,
     NewLeaf,
     PreviousLeaf,
